@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <section class="login__display">
+        <div class="card__login">
+            <h3 class="title__card__login"><i class="fa-solid fa-user-check"></i>&nbsp;Usuario:</h3>
+            <form id="username__Form" class="form__user">
+                <div class="group__input__line" id="bfr">
+                    <input type="text" autocomplete="off" id="username" class="user__input">
+                    <div class="outline" id="line_b"></div>
+                </div>
+                <button id="btn__username" type="submit"><i class="fa-solid fa-right-to-bracket"></i></button>
+            </form>
+            <div id="error__username" class="error__username"></div>
+        </div>
+    </section>
+
+    <main class="all all_d">
+        <button class="btn__mn"><i id="btn__menu" class="fa-solid fa-users"></i></button>
+        <div class=" btn__min box__hidden">
+            <h4>Chat</h4>
+            <div class="btns__chat__control">
+                <button class="btn__minim" id="maxim__alt"><i class="fa-solid fa-angle-up"></i></button>
+                <button class="btn__minim" id="close__alt"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+        </div>
+        <header class="hdr">
+            <i class="fa-solid fa-star-of-david"></i>&nbsp;<h1 class="name__page">Core Child</h1>&nbsp;<i class="fa-solid fa-star-of-david"></i>
+        </header>
+        <article class="content__all">
+            <section class="graphic__v">
+                <div id="list__people" class="victim__list">
+                    <li><i class="fa-solid fa-user"></i>&nbsp;&nbsp;Allyson M. Carter</li>
+                    <li><i class="fa-solid fa-user-large-slash"></i>&nbsp;J. Harry Jhonson</li>
+                    <li><i class="fa-solid fa-user-large-slash"></i>&nbsp;Calvin Forren</li>
+                    <li><i class="fa-solid fa-user"></i>&nbsp;&nbsp;Freddie D. Rithenhouse</li>
+                    <li><i class="fa-solid fa-user"></i>&nbsp;&nbsp;Andrew Woodell</li>
+                    <li><i class="fa-solid fa-user-large-slash"></i>&nbsp;Colin Lees</li>
+                    <li><i class="fa-solid fa-user"></i>&nbsp;&nbsp;Stephanie F. Brien</li>
+                    <li><i class="fa-solid fa-user-large-slash"></i>&nbsp;Connor Falcon</li>
+                    <li><i class="fa-solid fa-user-large-slash"></i>&nbsp;Paul Hauser</li>
+                    <li><i class="fa-solid fa-user-large-slash"></i>&nbsp;Jason S. Aselton</li>
+                    <li><i class="fa-solid fa-user"></i>&nbsp;&nbsp;Nick Robinson</li>
+                    <li><i class="fa-solid fa-user"></i>&nbsp;&nbsp;Ana P. Bowden</li>
+                </div>
+                <div class="vid__position">
+                    <div class="rep__med"><img src="imgs/bg__spc.jpg" alt="img" class="img__spc"></div>
+                    <div class="panel__control">
+                        <div class="btns__group">
+                            <button class="add__btn"><i class="fa-solid fa-thumbs-up" id="like__btn"></i></button>
+                            <p class="text__btn">Likes</p>
+                        </div>
+                        <div class="btns__group">
+                            <button id="comment__btn" class="btn__dlt"><i class="fa-solid fa-comment-dots" id="cmnt__btn"></i></button>
+                            <p class="text__btn">Comments</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="container__chat" id="chat__section">
+                <div class="btn__min">
+                    <h4>Chat</h4>
+                    <div class="btns__chat__control">
+                        <button class="btn__minim" id="minim"><i class="fa-solid fa-window-minimize"></i></button>
+                        <button class="btn__minim" id="close"><i class="fa-solid fa-xmark"></i></button>
+                    </div>
+                </div>
+                <div class="users__list" id="users"></div>
+                <div id="chat__container" class="chat__container"><!-- void --></div>
+                <form id="message__form" class="inputs__group">
+                    <input type="text" id="message" class="input__msg" autocomplete="off" placeholder="Your commentary:">
+                    <input type="submit" value="Send" class="btn__send">
+                </form>
+            </section>
+        </article>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="crossorigin="anonymous"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/efects.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
